@@ -34,11 +34,31 @@ public class Factorial {
 		*/
 
 		//YOUR CODE STARTS HERE
-
-		return -1;
+//		int num = scanner.nextInt();
+		String userResponse = scanner.next();
+		 System.out.println("this is the userResponse: " + userResponse);
+//		if (userResponse.matches("-?\\d+(\\.\\d+)?")) {
+//		 added try catch exception to handle the NumberFormatException- had to google for help with implementing since I forgot
+		 try {
+			int num = Integer.parseInt(userResponse);
+			System.out.println("this is the num: " + num);
+			if (num >= 1 && num <= 10) {
+				return num;
+			} else {
+//				I had to replace the sentence with the key from the Tests--I messaged Shams about this
+				this.printStream.print("Please Enter valid Input as number between 1 and 10 only, both inclusive");
+//				this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+				return -1;
+			}
+//			repeating the above (similar to else statement) if it runs into a number exception this code block will execute
+		} catch (NumberFormatException exception) {
+			 this.printStream.print("Please Enter valid Input as number between 1 and 10 only, both inclusive");
+//				this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+			 return -1;
+		 }
 
 		//YOUR CODE ENDS HERE
-		 
+
 			
 	 }
 	
@@ -53,7 +73,11 @@ public class Factorial {
 		 
 		int result = 1;
 		//YOUR CODE STARTS HERE
-
+//		take the user num and put in an array, so it loops and executes 1 - num then multiply to get result
+		 for (int i = 1; i <= num; i++) {
+			 System.out.println(i);
+			 result = result * i;
+		 }
  
 
 		//YOUR CODE ENDS HERE

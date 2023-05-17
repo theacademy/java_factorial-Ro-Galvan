@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "AutoGrade",
+      "setup": "",
+      "run": "mvn -B package --file factorial/pom.xml",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 70
+    }
+  ]
+}
