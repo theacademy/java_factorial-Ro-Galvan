@@ -73,7 +73,7 @@ public class Factorial {
 		 
 		int result = 1;
 		//YOUR CODE STARTS HERE
-//		take the user num and put in an array so it loops and executes 1 - num then multiply to get result
+//		take the user num and put in an array, so it loops and executes 1 - num then multiply to get result
 		 for (int i = 1; i <= num; i++) {
 			 System.out.println(i);
 			 result = result * i;
